@@ -14,7 +14,7 @@ public class User {
     private int num;
     private String empno;
     private String ename;
-    private Date bitrh;
+    private Date birth;
     private String idnum;
     private int deptno;
     private int job;
