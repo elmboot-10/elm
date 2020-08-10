@@ -1,10 +1,11 @@
 package com.neusoft.elmboot.mapper;
 
-import com.neusoft.elmboot.po.Mypost;
+import com.neusoft.elmboot.po.Position;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
+
 @Mapper
-public interface MypostMapper {
-    List<Mypost> selectMypostList();
+public interface PositionMapper {
+    List<Position> selectPositionList();
 }

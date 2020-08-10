@@ -3,7 +3,6 @@ package com.neusoft.elmboot.controller;
 import com.neusoft.elmboot.po.Figure;
 import com.neusoft.elmboot.po.User;
 import com.neusoft.elmboot.service.FigureService;
-import com.neusoft.elmboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

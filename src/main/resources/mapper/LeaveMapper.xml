@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.neusoft.elmboot.mapper.LeaveMapper">
-    <select id="selectLeaveList" resultType="com.neusoft.elmboot.po.Leave">
+    <select id="selectLeaveList" resultType="Leave">
         SELECT  l.`UserId` userId,l.`name` leaveName,d.`dname` bmName,j.`jname` gwName,e.`entime` enTime,l.`date` leaveTime,l.`type` leaveTt,l.`Talent-pool` leaveReason
         FROM `leave` l,`dept` d, `emp` e,`job` j
         WHERE l.`UserId` =e.`num` AND e.`job` =j.`jnum` AND e.`deptno` =d.`deptno`
