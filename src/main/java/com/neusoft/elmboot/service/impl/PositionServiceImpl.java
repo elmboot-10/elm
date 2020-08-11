@@ -16,4 +16,16 @@ public class PositionServiceImpl implements PositionService {
 public List<Position> selectPositionList (){
     return  positionMapper.selectPositionList();
 }
+@Override
+public int insert(Position position){
+    return positionMapper.insert(position);
+}
+    @Override
+    public int update(Position position){
+        return positionMapper.update(position);
+    }
+    @Override
+    public int delete(Position position){
+        return positionMapper.delete(position);
+    }
 }

@@ -4,6 +4,15 @@ public class Position {
     private String jnum;
     private String jname;
     private String jtype;
+    private  User user;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     public Position(){}
     public Position(String jnum,String jname,String jtype){
