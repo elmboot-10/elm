@@ -14,7 +14,7 @@
     </select>
     <select id="insert" resultType="java.lang.Integer">
         INSERT INTO `user` (`username`,`password`)
-        values (#{username},#{password})
+        values ('#{username}','#{password}')
     </select>
 
 </mapper>
