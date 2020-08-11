@@ -19,11 +19,20 @@ public class PositionController {
     public List<Position> getPositionList(){
         return positionService.selectPositionList();
     }
-    @RequestMapping(value = "/update",method = RequestMethod.POST)
-    public int update(@RequestBody Position position){return  positionService.update(position);}
-    @RequestMapping(value = "/insert",method = RequestMethod.POST)
-    public int insert(@RequestBody Position position){return  positionService.insert(position);}
-    @RequestMapping(value = "/delete",method = RequestMethod.POST)
-    public int delete(@RequestBody Position position){return  positionService.delete(position);}
+    @RequestMapping(value ="/insert",method = RequestMethod.POST)
+    public int insert(@RequestBody Position position){
+        return positionService.insert(position);
+    }
+
+    @RequestMapping(value = "/delete")
+    public int delete(@RequestBody Position position){
+        return positionService.delete(position);
+    }
+
+    @RequestMapping(value = "/update")
+    public int update(@RequestBody Position position){
+        return positionService.update(position);
+    }
+
 
 }
