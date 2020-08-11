@@ -6,4 +6,10 @@
     SELECT `jnum`,`jname`,`jtype`
       FROM `job`
     </select>
+
+    <select id="isExistJob" resultType="Integer">
+        SELECT COUNT(jname)
+        FROM job
+        WHERE jname=#{jname}
+    </select>
 </mapper>

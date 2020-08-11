@@ -16,4 +16,10 @@ public class DeptController {
     public List<Department> getDepartmentList(){
         return deptService.selectDeptList();
     }
+
+    @RequestMapping(value="/isexistdept")
+    public Integer isExistDept(Department department){
+        System.out.println("+++++++++++++"+department);
+        return deptService.isExistDept(department);
+    }
 }
