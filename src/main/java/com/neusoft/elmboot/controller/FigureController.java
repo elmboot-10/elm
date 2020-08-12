@@ -19,4 +19,12 @@ public class FigureController {
     public Figure getFigureByPassword(Figure figure){
         return figureService.getFigureByPassword(figure);
     }
+    @RequestMapping(value = "/isexistuser")
+    public Integer isExistFigure(Figure figure){
+        return figureService.isExistFigure(figure);
+    }
+    @RequestMapping(value = "/insert")
+    public int insert(Figure figure){
+        return figureService.insert(figure);
+    }
 }

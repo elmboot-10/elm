@@ -15,4 +15,12 @@ public class FigureServiceImpl implements FigureService {
     public Figure getFigureByPassword(Figure figure) {
         return figureMapper.getFigureByPassword(figure);
     }
+    @Override
+    public Integer isExistFigure(Figure figure){
+        return figureMapper.isExistFigure(figure);
+    }
+    @Override
+    public int insert(Figure figure){
+        return figureMapper.insert(figure);
+    }
 }
