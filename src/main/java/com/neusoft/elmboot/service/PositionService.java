@@ -7,5 +7,10 @@ import java.util.List;
 
 public interface PositionService {
     List<Position> selectPositionList();
-    Integer isExistJob(Position position);
+
+    public int insert(Position position);
+    public int update(Position position);
+    public int delete(Position position);
+
+
 }

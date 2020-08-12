@@ -6,11 +6,4 @@
         SELECT `deptno`,`dname` ,`location`,`tel`, `setuptime`
         FROM `dept`
     </select>
-
-    <select id="isExistDept" resultType="Integer">
-        SELECT COUNT(dname)
-        FROM dept
-        WHERE dname=#{dname}
-    </select>
-
 </mapper>
