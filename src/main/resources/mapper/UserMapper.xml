@@ -14,6 +14,7 @@
     </select>
 
     <insert id="insert" parameterType="User">
-        INSERT INTO emp VALUES(#{num},#{empno},#{ename},#{birth},#{idnum},#{deptno},#{job},#{entime},#{wtime},#{form},#{resource},#{tel},#{email})
+        INSERT INTO emp (`empno`,`ename`,`birth`,`idnum`,`job`,`entime`,`wtime`,`form`,`resource`,`tel`,`email`)
+        VALUES(#{empno},#{ename},#{birth},#{idnum},#{job},#{entime},#{wtime},#{form},#{resource},#{tel},#{email})
     </insert>
 </mapper>

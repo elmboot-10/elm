@@ -38,4 +38,7 @@ public class UserController {
     {
         return userService.dataEntry(user);
     }
+
+    @RequestMapping(value = "/delete",method = RequestMethod.POST)
+    public int delete(@RequestBody User user){return userService.delete(user);}
 }
