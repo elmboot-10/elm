@@ -17,6 +17,15 @@ public class StaffServiceImpl implements StaffService {
         return staffMapper.isExistStaff(staff);
     }
 
+    @Override
+    public Integer isExistDept(Staff staff) {
+        return staffMapper.isExistDept(staff);
+    }
+
+    @Override
+    public Integer isExistJob(Staff staff) {
+        return staffMapper.isExistJob(staff);
+    }
 
     @Override
     public int dataEntry(Staff staff) {

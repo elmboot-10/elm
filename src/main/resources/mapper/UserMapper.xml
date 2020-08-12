@@ -7,12 +7,12 @@
       select `num`,`empno`,`ename`,`birth`,`idnum`,`deptno`,`job`,`entime`,`wtime`,`form`,`resource`,`tel`,`email`
       from `emp`
     ]]></select>
-    
-    
+
+
     <select id="isExistUser" resultType="Integer">
         SELECT COUNT(empno) FROM emp WHERE empno=#{empno}
     </select>
-    
+
     <insert id="insert" parameterType="User">
         INSERT INTO emp VALUES(#{num},#{empno},#{ename},#{birth},#{idnum},#{deptno},#{job},#{entime},#{wtime},#{form},#{resource},#{tel},#{email})
     </insert>

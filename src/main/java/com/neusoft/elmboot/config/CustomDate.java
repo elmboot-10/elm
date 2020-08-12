@@ -1,5 +1,4 @@
 package com.neusoft.elmboot.config;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +11,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 
 @Configuration
-public class CustomDateConverter {
+public class CustomDate {
 
     @Bean
     public MappingJackson2HttpMessageConverter getMappingJackson2HttpMessageConverter() {
