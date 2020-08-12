@@ -2,10 +2,7 @@ package com.neusoft.elmboot.mapper;
 
 import com.neusoft.elmboot.po.Department;
 import com.neusoft.elmboot.po.Position;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -17,13 +14,12 @@ public interface PositionMapper {
             " values(#{jnum},#{jname},#{jtype})")
     public int insert(Position position);
     //修改
-    @Update("UPDATE `job` SET `jname`=#{jname},`jtype`=#{jtype},"
-            +
-            " WHERE `jnum`=#{jnum} ")
+    @Update("UPDATE `job` SET `jname`=#{jname},`jtype`=#{jtype} WHERE `jnum`=#{jnum} ")
     public int update(Position position);
     //删除
     @Delete("delete from job where jnum=#{jnum}")
     public int delete(Position position);
 
-
+    @Select("select * from job where jnum=#{jnum}")
+    Position getPositionById(String jnum);
 }

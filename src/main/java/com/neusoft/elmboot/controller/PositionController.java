@@ -34,5 +34,8 @@ public class PositionController {
         return positionService.update(position);
     }
 
-
+    @RequestMapping(value = "/getposiById",method = RequestMethod.POST)
+    public Position getPositionById(@RequestBody Position position) {
+        return positionService.getPositionById(position);
+    }
 }

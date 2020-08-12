@@ -31,5 +31,8 @@ public int insert(Position position){
         return positionMapper.delete(position);
     }
 
-
+    @Override
+    public Position getPositionById(Position position) {
+        return positionMapper.getPositionById(position.getJnum());
+    }
 }
