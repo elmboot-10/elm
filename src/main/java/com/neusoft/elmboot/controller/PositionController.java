@@ -24,12 +24,12 @@ public class PositionController {
         return positionService.insert(position);
     }
 
-    @RequestMapping(value = "/delete")
+    @RequestMapping(value = "/delete",method = RequestMethod.POST)
     public int delete(@RequestBody Position position){
         return positionService.delete(position);
     }
 
-    @RequestMapping(value = "/update")
+    @RequestMapping(value = "/update",method = RequestMethod.POST)
     public int update(@RequestBody Position position){
         return positionService.update(position);
     }
