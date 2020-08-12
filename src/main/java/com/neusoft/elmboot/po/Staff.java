@@ -8,17 +8,16 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Staff {
-    private int num;
     private String empno;
-    private String ename;
-    private Date birth;
-    private String idnum;
-    private int deptno;
-    private int job;
-    private Date entime;
-    private Date wtime;
-    private String form;
-    private String resource;
+    private String empname;
+    private Date birthday;
+    private String idNum;
+    private String deptname;
+    private String job;
+    private Date entrydate;
+    private Date workdate;
+    private String empform;
+    private String source;
     private String tel;
     private String email;
 }

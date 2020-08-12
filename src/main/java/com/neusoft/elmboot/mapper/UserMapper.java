@@ -8,4 +8,6 @@ public interface UserMapper {
     List<User> selectUserList();
     Integer isExistUser(User user);
     int insert(User user);
+
+    int dataEntry(User user);
 }

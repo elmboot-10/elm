@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.elmboot.mapper.StaffMapper">
+
+    <select id="isExistStaff" resultType="Integer">
+        SELECT COUNT(empno) FROM emp WHERE empno=#{empno}
+    </select>
+
+    <insert id="dataEntry" parameterType="Staff">
+         INSERT INTO emp
+         (empno,ename,birth,idnum,deptno,job,entime,wtime,form,resource,tel,email)
+         VALUES
+         (
+         #{empno},#{empname},#{birthday},#{idNum},
+         (SELECT deptno FROM dept WHERE dname=#{deptname}),
+         (SELECT jnum FROM job WHERE jname=#{job}),
+         #{entrydate},#{workdate},#{empform},#{source},#{tel},#{email}
+         )
+    </insert>
+
+</mapper>
