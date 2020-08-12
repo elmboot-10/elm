@@ -8,4 +8,6 @@ public interface UserService {
     Integer isExistUser(User user);
     int insert(User user);
     int dataEntry(User user);
+
+    int delete(User user);
 }

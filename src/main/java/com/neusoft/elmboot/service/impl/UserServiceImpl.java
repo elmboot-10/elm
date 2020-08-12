@@ -32,4 +32,9 @@ public class UserServiceImpl implements UserService {
         return userMapper.dataEntry(user);
     }
 
+    @Override
+    public int delete(User user) {
+        return userMapper.delete(user);
+    }
+
 }

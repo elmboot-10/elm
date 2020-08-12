@@ -16,5 +16,4 @@ public class Department {
    private String location;
    private String tel;
    private Date setuptime;
-
 }
