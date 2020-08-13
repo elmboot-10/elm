@@ -19,11 +19,11 @@ public class TalentServiceImpl implements TalentService {
         return talentMapper.selectTalentList();
     }
     @Override
-    public List<Talent> getTalentListPage(Map<String,Integer> map) {
+    public List<Talent> getTalentListPage(Map<String,Object> map) {
         return talentMapper.getTalentListPage(map);
     }
     @Override
-    public int counts(Map<String,Integer> map) {
+    public int counts(Map<String,Object> map) {
         return talentMapper.counts(map);
     }
 

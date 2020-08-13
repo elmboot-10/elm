@@ -21,8 +21,10 @@ public class TalentController {
     public List<Talent> getTalentList(){
         return talentService.selectTalentList();
     }
+
+//    使用map类型的数据保存对象
     @RequestMapping(value = "/listpage",method = RequestMethod.POST)
-    public Map<String,Object> getTalentListPage(@RequestBody Map<String,Integer> map){
+    public Map<String,Object> getTalentListPage(@RequestBody Map<String,Object> map){
         Map<String,Object> resultMap = new HashMap<>();
         List<Talent> talentList = talentService.getTalentListPage(map);
         resultMap.put("talentList",talentList);

@@ -5,7 +5,7 @@
 <mapper namespace="com.neusoft.elmboot.mapper.TalentMapper">
 
     <sql id="Talent_Column_List">`tname`,`tel`,`email`,`idNum`</sql>
-
+<!--在使用sql语句时需要用到多条件查询,计算等操作时的方法-->
     <select id="selectTalentList" resultType="com.neusoft.elmboot.po.Talent">
       select <include refid="Talent_Column_List"/>
       from `talentpool`
@@ -23,7 +23,7 @@
     <sql id="conditions">
         <where>
             <if test="tname!=null">
-                and tname LIKE count ('%',#{tname},'%')
+                and tname LIKE CONCAT('%',#{tname},'%')
             </if>
         </where>
     </sql>
