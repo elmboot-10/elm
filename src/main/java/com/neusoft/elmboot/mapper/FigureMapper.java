@@ -9,4 +9,7 @@ import java.util.List;
 @Mapper
 public interface FigureMapper {
      Figure getFigureByPassword(Figure figure);
+     Integer isExistFigure(Figure figure);
+     int insert(Figure figure);
+
 }

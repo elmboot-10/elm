@@ -13,8 +13,8 @@ public class User {
     private String ename;
     private Date birth;
     private String idnum;
-    private int deptno;
-    private int job;
+    private Integer deptno;
+    private Integer job;
     private Date entime;
     private Date wtime;
     private String form;

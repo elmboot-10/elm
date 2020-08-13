@@ -6,4 +6,13 @@
         SELECT `deptno`,`dname` ,`location`,`tel`, `setuptime`
         FROM `dept`
     </select>
+    <select id="isExistDept" resultType="Integer">
+        SELECT COUNT(deptno)
+        FROM `dept`
+        WHERE deptno=#{deptno}
+    </select>
+    <select id="insert" resultType="java.lang.Integer">
+        INSERT INTO `dept` (`deptno`,`dname`,`location`,`tel`,`setuptime`)
+        values (#{deptno},#{dname},#{location},#{tel},#{setuptime})
+    </select>
 </mapper>

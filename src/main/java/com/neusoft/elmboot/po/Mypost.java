@@ -1,12 +1,21 @@
 package com.neusoft.elmboot.po;
 
-public class Mypost {
+public class Position {
     private String jnum;
     private String jname;
     private String jtype;
-    public Mypost() {}
+    private  User user;
 
-    public Mypost(String jnum,String jname,String jtype){
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Position(){}
+    public Position(String jnum,String jname,String jtype){
         this.jnum=jnum;
         this.jname=jname;
         this.jtype=jtype;
