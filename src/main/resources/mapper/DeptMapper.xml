@@ -11,8 +11,8 @@
         FROM `dept`
         WHERE deptno=#{deptno}
     </select>
-    <select id="insert" resultType="java.lang.Integer">
+    <insert id="insert">
         INSERT INTO `dept` (`deptno`,`dname`,`location`,`tel`,`setuptime`)
         values (#{deptno},#{dname},#{location},#{tel},#{setuptime})
-    </select>
+    </insert>
 </mapper>
