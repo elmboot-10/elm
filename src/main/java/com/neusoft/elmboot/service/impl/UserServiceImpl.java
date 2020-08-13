@@ -4,6 +4,7 @@ import com.neusoft.elmboot.mapper.UserMapper;
 import com.neusoft.elmboot.po.User;
 import com.neusoft.elmboot.service.UserService;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -37,4 +38,8 @@ public class UserServiceImpl implements UserService {
         return userMapper.delete(user);
     }
 
+    @Override
+    public User getUserById( User user){
+        return userMapper.getUserById(user.getJob());
+    }
 }
