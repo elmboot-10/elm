@@ -21,6 +21,18 @@ public class StaffController {
         return staffService.isExistStaff(staff);
     }
 
+    @RequestMapping(value="/isExistDept")
+    public Integer isExistDept(Staff staff){
+        System.out.println("+++++++++++++"+staff);
+        return staffService.isExistDept(staff);
+    }
+
+    @RequestMapping(value="/isExistJob")
+    public Integer isExistJob(Staff staff){
+        System.out.println("+++++++++++++"+staff);
+        return staffService.isExistJob(staff);
+    }
+
     @RequestMapping(value="/dataEntry",method = RequestMethod.POST)
     public int dataEntry(@RequestBody Staff staff)
     {

@@ -7,6 +7,8 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface StaffMapper {
     Integer isExistStaff(Staff staff);
+    Integer isExistDept(Staff staff);
+    Integer isExistJob(Staff staff);
 
     int dataEntry(Staff staff);
 }
