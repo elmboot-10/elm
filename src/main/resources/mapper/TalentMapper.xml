@@ -4,10 +4,33 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.neusoft.elmboot.mapper.TalentMapper">
 
+    <sql id="Talent_Column_List">`tname`,`tel`,`email`,`idNum`</sql>
+
     <select id="selectTalentList" resultType="com.neusoft.elmboot.po.Talent">
-      select `name`,`tel`,`email`,`idNum`
+      select <include refid="Talent_Column_List"/>
       from `talentpool`
     </select>
 
-
+    <select id="getTalentListPage" resultType="Talent">
+        select <include refid="Talent_Column_List"/>
+        from `talentpool`
+        <include refid="conditions"/>
+        order by tid asc
+        <bind name="offset" value="pageSize*(pageNo-1)"/>
+        limit #{offset,jdbcType=INTEGER},#{pageSize,jdbcType=INTEGER}
+    </select>
+    
+    <sql id="conditions">
+        <where>
+            <if test="tname!=null">
+                and tname LIKE count ('%',#{tname},'%')
+            </if>
+        </where>
+    </sql>
+    
+    <select id="counts" resultType="int">
+        select count(tid)
+        from talentpool
+        <include refid="conditions"/>
+    </select>
 </mapper>

@@ -9,6 +9,6 @@ import java.util.Map;
 @Mapper
 public interface TalentMapper {
     List<Talent> selectTalentList();
-    List<Talent> getTalentListPage(Map<String,Object> map);
-    int counts(Map<String,Object> map);
+    List<Talent> getTalentListPage(Map<String,Integer> map);
+    int counts(Map<String,Integer> map);
 }
