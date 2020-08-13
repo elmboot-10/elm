@@ -1,11 +1,8 @@
 package com.neusoft.elmboot.service.impl;
 
 import com.neusoft.elmboot.mapper.TalentMapper;
-import com.neusoft.elmboot.mapper.UserMapper;
 import com.neusoft.elmboot.po.Talent;
-import com.neusoft.elmboot.po.User;
 import com.neusoft.elmboot.service.TalentService;
-import com.neusoft.elmboot.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

@@ -3,25 +3,25 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.neusoft.elmboot.mapper.StaffMapper">
-
+<!--检查雇员号是否存在-->
     <select id="isExistStaff" resultType="Integer">
         SELECT COUNT(empno)
         FROM emp
         WHERE empno=#{empno}
     </select>
-
+<!--检查部门是否存在-->
     <select id="isExistDept" resultType="Integer">
         SELECT COUNT(dname)
         FROM dept
         WHERE dname=#{deptname}
     </select>
-
+<!--检查职位是否存在-->
     <select id="isExistJob" resultType="Integer">
         SELECT COUNT(jname)
         FROM job
         WHERE jname=#{job}
     </select>
-
+<!--插入数据-->
     <insert id="dataEntry" parameterType="Staff">
          INSERT INTO emp
          (empno,ename,birth,idnum,deptno,job,entime,wtime,form,resource,tel,email)

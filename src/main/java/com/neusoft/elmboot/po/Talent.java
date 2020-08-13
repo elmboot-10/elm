@@ -9,8 +9,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class Talent {
-    private String name;
+    private String tname;
     private String tel;
     private String email;
     private String idNum;
+    private Integer pageSize;
+    private Integer pageNo;
 }

@@ -11,8 +11,15 @@
         FROM `dept`
         WHERE deptno=#{deptno}
     </select>
-    <select id="insert" resultType="java.lang.Integer">
+    <insert id="insert">
         INSERT INTO `dept` (`deptno`,`dname`,`location`,`tel`,`setuptime`)
         values (#{deptno},#{dname},#{location},#{tel},#{setuptime})
-    </select>
+    </insert>
+<!--    <delete id="delete">-->
+<!--        SET FOREIGN_KEY_CHECKS = 0;-->
+<!--        delete from `dept` where deptno=#{deptno}-->
+<!--    </delete>-->
+<!--    <update id="update">-->
+<!--        UPDATE `dept` SET `dname`=#{dname},`location`=#{location},`setuptime`=#{setuptime} WHERE deptno=#{deptno}-->
+<!--    </update>-->
 </mapper>
