@@ -11,4 +11,5 @@ public interface FigureMapper {
      Figure getFigureByPassword(Figure figure);
      Integer isExistFigure(Figure figure);
      int insert(Figure figure);
+
 }
