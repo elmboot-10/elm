@@ -12,8 +12,8 @@
         FROM `user`
         WHERE username=#{username}
     </select>
-        <select id="insert" resultType="java.lang.Integer">
+        <insert id="insert" >
         INSERT INTO `user` (`username`,`password`)
         values (#{username},#{password})
-    </select>
+    </insert>
 </mapper>
