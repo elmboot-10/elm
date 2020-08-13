@@ -1,6 +1,5 @@
 package com.neusoft.elmboot.controller;
 import com.neusoft.elmboot.po.Department;
-import com.neusoft.elmboot.po.Figure;
 import com.neusoft.elmboot.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,13 +15,5 @@ public class DeptController {
     @RequestMapping("/list")
     public List<Department> getDepartmentList(){
         return deptService.selectDeptList();
-    }
-    @RequestMapping(value = "/isexistdept")
-    public Integer isExistDept(Department dept){
-        return deptService.isExistDept(dept);
-    }
-    @RequestMapping(value = "/insert")
-    public int insert(Department dept){
-        return deptService.insert(dept);
     }
 }

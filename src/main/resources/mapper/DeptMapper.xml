@@ -2,17 +2,8 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.neusoft.elmboot.mapper.DeptMapper">
-    <select id="selectDeptList" resultType="com.neusoft.elmboot.po.Department">
+    <select id="selectDeptList" resultType="Department">
         SELECT `deptno`,`dname` ,`location`,`tel`, `setuptime`
         FROM `dept`
-    </select>
-    <select id="isExistDept" resultType="Integer">
-        SELECT COUNT(deptno)
-        FROM `dept`
-        WHERE deptno=#{deptno}
-    </select>
-    <select id="insert" resultType="java.lang.Integer">
-        INSERT INTO `dept` (`deptno`,`dname`,`location`,`tel`,`setuptime`)
-        values (#{deptno},#{dname},#{location},#{tel},#{setuptime})
     </select>
 </mapper>

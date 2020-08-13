@@ -1,7 +1,6 @@
 package com.neusoft.elmboot.service.impl;
 
 import com.neusoft.elmboot.mapper.PositionMapper;
-import com.neusoft.elmboot.po.Department;
 import com.neusoft.elmboot.po.Position;
 import com.neusoft.elmboot.service.PositionService;
 import org.springframework.stereotype.Service;

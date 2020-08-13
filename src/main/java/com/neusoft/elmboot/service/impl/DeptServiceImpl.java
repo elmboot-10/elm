@@ -15,12 +15,4 @@ public class DeptServiceImpl implements DeptService {
     public List<Department> selectDeptList() {
         return deptMapper.selectDeptList();
     }
-    @Override
-    public Integer isExistDept(Department dept){
-        return deptMapper.isExistDept(dept);
-    }
-    @Override
-    public int insert(Department dept){
-        return deptMapper.insert(dept);
-    }
 }

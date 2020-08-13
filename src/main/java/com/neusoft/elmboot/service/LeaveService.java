@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface LeaveService {
     List<Leave> selectLeaveList(Leave leave);
-    public Leave getLeaveById(Leave leave);
+    public Leave getLeaveById(@RequestBody Leave leave);
     public int insert(Leave leave);
     public int update(Leave leave);
     public int delete(Leave leave);
