@@ -1,6 +1,5 @@
 package com.neusoft.elmboot.mapper;
 
-import com.neusoft.elmboot.po.Department;
 import com.neusoft.elmboot.po.Position;
 import org.apache.ibatis.annotations.*;
 

@@ -13,7 +13,25 @@ public class LeaveServiceImpl implements LeaveService {
     @Resource
     private LeaveMapper leaveMapper;
     @Override
-    public List<Leave> selectLeaveList() {
-        return leaveMapper.selectLeaveList();
+    public List<Leave> selectLeaveList(Leave leave) {
+        return leaveMapper.selectLeaveList(leave);}
+     @Override
+     public Leave getLeaveById(Leave leave) {
+            return leaveMapper.getLeaveById(leave.getLeaveId());
+        }
+    @Override
+    public int insert(Leave leave) {
+        return leaveMapper.insert(leave);
     }
-}
+     @Override
+      public int update(Leave leave) {
+        return leaveMapper.update(leave);
+        }
+    @Override
+    public int delete(Leave leave) {
+        return leaveMapper.delete(leave);
+    }
+
+
+    }
+

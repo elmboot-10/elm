@@ -1,6 +1,8 @@
 package com.neusoft.elmboot.po;
 
 public class Leave {
+
+    private Integer leaveId;
     private String userId;
     private String leaveName;
     private String bmName;
@@ -11,8 +13,9 @@ public class Leave {
     private String leaveReason;
 
     public  Leave(){}
-    public  Leave(String userId,String leaveName,String bmName,String gwName,String enTime,String leaveTime,String leaveTt,String leaveReason)
+    public  Leave(Integer leaveId,String userId,String leaveName,String bmName,String gwName,String enTime,String leaveTime,String leaveTt,String leaveReason)
     {
+        this.leaveId=leaveId;
         this.userId =userId;
         this.leaveName= leaveName;
         this.bmName = bmName;
@@ -23,10 +26,18 @@ public class Leave {
         this.leaveReason=leaveReason;
     }
 
+
+    public Integer getLeaveId() {
+        return leaveId;
+    }
+
+    public void setLeaveId(Integer leaveId) {
+        this.leaveId = leaveId;
+    }
+
     public String getUserId() {
         return userId;
     }
-
     public void setUserId(String userId) {
         this.userId = userId;
     }

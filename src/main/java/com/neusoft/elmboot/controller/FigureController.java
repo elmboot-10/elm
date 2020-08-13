@@ -1,5 +1,3 @@
-package com.neusoft.elmboot.controller;
-
 import com.neusoft.elmboot.po.Figure;
 import com.neusoft.elmboot.po.User;
 import com.neusoft.elmboot.service.FigureService;
