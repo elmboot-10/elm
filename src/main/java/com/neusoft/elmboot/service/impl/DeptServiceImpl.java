@@ -2,6 +2,7 @@ package com.neusoft.elmboot.service.impl;
 
 import com.neusoft.elmboot.mapper.DeptMapper;
 import com.neusoft.elmboot.po.Department;
+import com.neusoft.elmboot.po.Position;
 import com.neusoft.elmboot.service.DeptService;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
@@ -22,5 +23,13 @@ public class DeptServiceImpl implements DeptService {
     @Override
     public int insert(Department dept){
         return deptMapper.insert(dept);
+    }
+    @Override
+    public int update(Department dept){
+        return deptMapper.update(dept);
+    }
+    @Override
+    public int delete(Department dept){
+        return deptMapper.delete(dept);
     }
 }
