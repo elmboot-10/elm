@@ -12,7 +12,7 @@
         FROM `user`
         WHERE username=#{username}
     </select>
-        <insert id="insert" >
+    <insert id="insert" >
         INSERT INTO `user` (`username`,`password`)
         values (#{username},#{password})
     </insert>
